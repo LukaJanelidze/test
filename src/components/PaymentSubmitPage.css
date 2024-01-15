@@ -1,0 +1,49 @@
+.second-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 375px;
+    margin-top: 20px;
+}
+
+.second-form img {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.second-form h1 {
+    color: #ff0000;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.422px;
+    margin-top: 35px;
+}
+
+.second-form p {
+    color: #ff0000;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin-top: 16px;
+}
+
+.second-form button {
+    width: 327px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #dd4c4c;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 48px;
+}

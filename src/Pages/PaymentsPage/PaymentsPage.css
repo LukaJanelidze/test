@@ -1,0 +1,303 @@
+.paymentspage {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.cards .back-card {
+    max-width: 100%;
+    max-height: 100%;
+    flex-shrink: 0;
+}
+
+.cards .back-card-box {
+    min-width: 286px;
+    height: 157px;
+    position: absolute;
+    top: 32px;
+    right: 10px;
+}
+
+.cards .back-card-box .card-back-cvc {
+    color: white;
+    text-align: right;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.286px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 73.64px;
+    left: 230.98px;
+}
+
+.cards .front-card-box {
+    width: 285px;
+    height: 156.208px;
+    position: absolute;
+    top: 126px;
+    left: 10px;
+    background: linear-gradient(
+        50deg,
+        rgba(255, 0, 0, 1) 25%,
+        rgba(221, 76, 10, 1) 50%,
+        rgba(221, 76, 76, 1) 75%
+      );
+    border-radius: 9px;
+}
+
+.cards .front-card {
+    max-width: 100%;
+    max-height: 100%;
+    flex-shrink: 0;
+    border-radius: 6px;
+}
+
+.cards .logos {
+    height: 30px;
+    flex-shrink: 0;
+    position: absolute;
+    z-index: 2;
+    left: 19px;
+    top: 17.6px;
+}
+
+.cards .card-numbers {
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.2px;
+    position: absolute;
+    z-index: 2;
+    left: 19px;
+    top: 84.6px;
+}
+
+.card-holder-name {
+    color: white;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.286px;
+    position: absolute;
+    z-index: 2;
+    left: 19px;
+    top: 124.6px;
+}
+
+.card-date {
+    color: white;
+    text-align: right;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1.286px;
+    position: absolute;
+    z-index: 2;
+    left: 232.11px;
+    top: 124.6px;
+}
+
+/* form */
+
+.first-form {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin-top: 300px;
+}
+
+.card-holder {
+    display: flex;
+    width: 327px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 9px;
+    margin-left: 24px;
+}
+
+.card-holder label {
+    color: black;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.card-holder input {
+    width: 327px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--Light-Grey, #DFDEE0);
+    background: white;
+    padding-left: 24px;
+    color: black;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.card-holder input::placeholder {
+    opacity: 0.25;
+}
+
+.card-number {
+    display: flex;
+    width: 327px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 20px 0 0 24px;
+}
+
+.card-number label {
+    color: black;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.card-number input {
+    width: 327px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--Light-Grey, #DFDEE0);
+    background: white;
+    padding-left: 24px;
+    color: black;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+
+.card-number input::placeholder {
+    opacity: 0.25;
+}
+
+.cvcdate {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.date-info {
+    width: 156px;
+    flex-shrink: 0;
+    margin-left: 24px;
+}
+
+.date-info label {
+    color: black;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.date-info #year {
+    margin-left: 8px;
+}
+
+.date-info input {
+    width: 72px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--Light-Grey, #DFDEE0);
+    background: white;
+    color: black;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    padding-left: 16px;
+    margin-top: 9px;
+}
+
+.date-info input::placeholder {
+    opacity: 0.25;
+}
+
+.cvc-info {
+    width: 164px;
+    flex-shrink: 0;
+    margin-right: 24px;
+}
+
+.cvc-info label {
+    color: black;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.cvc-info input {
+    width: 164px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid var(--Light-Grey, #DFDEE0);
+    background: white;
+    color: black;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    padding-left: 16px;
+    margin-top: 9px;
+}
+
+.cvc-info input::placeholder {
+    opacity: 0.25;
+}
+
+.first-form button {
+    width: 327px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #dd4c4c;
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 28px 0 24px 24px;
+    border: none;
+}
+
+.error {
+    color: var(--Red, #FF5050);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+
+@media screen and (min-width: 768px) {
+
+
+
+}

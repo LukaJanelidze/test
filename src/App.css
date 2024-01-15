@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@200;400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Serif Georgian', serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menuheader {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(221, 76, 76, 1), 0 0 40px rgba(245,200,200,1);
+  margin-bottom: 30px;
+  display: flex;
+  color: #ff0000;
+  justify-content: flex-end;
+  font-size: 30px;
+}
+
+.navbardiv {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .navbardiv {
+    display: flex;
+    width: 100%;
+  }
+
+  .menuheader {
+    display: none;
+  }
+}
