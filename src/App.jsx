@@ -10,6 +10,7 @@ import PaymentSubmitPage from './components/PaymentSubmitPage'
 import './App.css'
 import { Drawer } from 'antd'
 import { MenuOutlined } from "@ant-design/icons"
+// import Footer from './components/Footer'
 
 function App() {
 
@@ -52,6 +53,8 @@ function App() {
         <Route path="register" element={<RegisterPage />} />
         <Route path="volunteer" element={<VolunteerPage />} />
       </Routes>
+
+      {/* <Footer /> */}
     </div>
   )
 }
