@@ -6,6 +6,7 @@ footer {
     align-items: center;
     background-color: #dd4c4c;
     box-shadow: 0 0 40px rgba(221, 76, 76, 1), 0 0 40px rgba(245,200,200,1);
+    margin-top: 40px;
 }
 
 footer p {

@@ -5,14 +5,16 @@
 
 .cards {
     width: 100%;
-    height: 300px;
+
+}
+
+.cards .cards-container {
     position: relative;
 }
 
 .cards .back-card {
     max-width: 100%;
     max-height: 100%;
-    flex-shrink: 0;
 }
 
 .cards .back-card-box {
@@ -28,7 +30,7 @@
     text-align: right;
     font-size: 12px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: 1.286px;
     text-transform: uppercase;
@@ -72,7 +74,7 @@
     color: white;
     font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: 2.2px;
     position: absolute;
@@ -85,7 +87,7 @@
     color: white;
     font-size: 9px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: 1.286px;
     position: absolute;
@@ -99,7 +101,7 @@
     text-align: right;
     font-size: 9px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: 1.286px;
     position: absolute;
@@ -114,17 +116,17 @@
     display: flex;
     flex-direction: column;
     background: white;
-    margin-top: 300px;
+    margin: 300px 0 0 0;
+    padding: 10px;
 }
 
 .card-holder {
     display: flex;
-    width: 327px;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 9px;
-    margin-left: 24px;
 }
 
 .card-holder label {
@@ -137,13 +139,13 @@
 }
 
 .card-holder input {
-    width: 327px;
+    width: 100%;
     height: 45px;
     flex-shrink: 0;
     border-radius: 8px;
-    border: 1px solid var(--Light-Grey, #DFDEE0);
+    border: 1px solid #DFDEE0;
     background: white;
-    padding-left: 24px;
+    padding: 20px;
     color: black;
     font-size: 18px;
     font-style: normal;
@@ -157,12 +159,12 @@
 
 .card-number {
     display: flex;
-    width: 327px;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 9px;
-    margin: 20px 0 0 24px;
+    margin-top: 20px;
 }
 
 .card-number label {
@@ -175,13 +177,13 @@
 }
 
 .card-number input {
-    width: 327px;
+    width: 100%;
     height: 45px;
     flex-shrink: 0;
     border-radius: 8px;
-    border: 1px solid var(--Light-Grey, #DFDEE0);
+    border: 1px solid  #DFDEE0;
     background: white;
-    padding-left: 24px;
+    padding: 20px;
     color: black;
     font-size: 18px;
     font-style: normal;
@@ -194,18 +196,19 @@
 }
 
 .cvcdate {
+    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
 }
 
 .date-info {
-    width: 156px;
-    flex-shrink: 0;
-    margin-left: 24px;
+    width: 50%;
 }
 
 .date-info label {
+    display: block;
     color: black;
     font-size: 12px;
     font-style: normal;
@@ -214,23 +217,28 @@
     letter-spacing: 2px;
 }
 
+.date-info #month {
+    width: 45%;
+}
+
 .date-info #year {
-    margin-left: 8px;
+    width: 45%;
+    margin-left: 17px;
 }
 
 .date-info input {
-    width: 72px;
+    width: 100%;
     height: 45px;
     flex-shrink: 0;
     border-radius: 8px;
-    border: 1px solid var(--Light-Grey, #DFDEE0);
+    border: 1px solid #DFDEE0;
     background: white;
     color: black;
     font-size: 18px;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
-    padding-left: 16px;
+    padding: 10px;
     margin-top: 9px;
 }
 
@@ -239,12 +247,11 @@
 }
 
 .cvc-info {
-    width: 164px;
-    flex-shrink: 0;
-    margin-right: 24px;
+    width: 45%;
 }
 
 .cvc-info label {
+    display: block;
     color: black;
     font-size: 12px;
     font-style: normal;
@@ -254,18 +261,18 @@
 }
 
 .cvc-info input {
-    width: 164px;
+    width: 100%;
     height: 45px;
     flex-shrink: 0;
     border-radius: 8px;
-    border: 1px solid var(--Light-Grey, #DFDEE0);
+    border: 1px solid #DFDEE0;
     background: white;
     color: black;
     font-size: 18px;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
-    padding-left: 16px;
+    padding: 15px;
     margin-top: 9px;
 }
 
@@ -274,7 +281,7 @@
 }
 
 .first-form button {
-    width: 327px;
+    width: 100%;
     height: 53px;
     flex-shrink: 0;
     border-radius: 8px;
@@ -284,12 +291,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin: 28px 0 24px 24px;
     border: none;
+    margin-top: 40px;
 }
 
 .error {
-    color: var(--Red, #FF5050);
+    color: #FF5050;
     font-size: 13px;
     font-style: normal;
     font-weight: 200;
@@ -298,6 +305,187 @@
 
 @media screen and (min-width: 768px) {
 
+    .paymentspage {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cards .back-card {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .cards .back-card-box {
+        height: 200px;
+        top: 30px;
+        right: 100px;
+    }
+    
+    .cards .back-card-box .card-back-cvc {
+        color: white;
+        font-size: 16px;
+        letter-spacing: 2px;
+        top: 85px;
+        left: 280px;
+    }
+    
+    .cards .front-card-box {
+        width: 355px;
+        height: 200px;
+        position: absolute;
+        top: 145px;
+        left: 100px;
+        border-radius: 9px;
+    }
+    
+    .cards .logos {
+        height: 35px;
+        left: 15px;
+        top: 15px;
+    }
+    
+    .cards .card-numbers {
+        font-size: 25px;
+        letter-spacing: 2.2px;
+        left: 15px;
+        top: 90px;
+    }
+    
+    .card-holder-name {
+        font-size: 13px;
+        letter-spacing: 2px;
+        position: absolute;
+        z-index: 2;
+        left: 15px;
+        top: 155px;
+    }
+    
+    .card-date {
+        font-size: 13px;
+        letter-spacing: 2px;
+        left: 280px;
+        top: 155px;
+    }
+    
+    .first-form {
+        margin-top: 400px;
+        padding: 10px;
+    }
+    
+    .card-holder {
+        gap: 15px;
+    }
+    
+    .card-holder label {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .card-holder input {
+        height: 60px;
+        border: 2px solid #DFDEE0;
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    .card-holder input::placeholder {
+        opacity: 0.5;
+    }
+    
+    .card-number {
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .card-number label {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .card-number input {
+        height: 60px;
+        border: 2px solid #DFDEE0;
+        padding: 20px;
+        font-size: 20px;
+    }
 
+    .card-number input::placeholder {
+        opacity: .5;
+    }
+    
+    .date-info {
+        width: 50%;
+    }
+    
+    .date-info label {
+        display: block;
+        color: black;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .date-info #month {
+        width: 48%;
+    }
+    
+    .date-info #year {
+        width: 48%;
+        margin-left: 10px;
+    }
+    
+    .date-info input {
+        width: 100%;
+        height: 60px;
+        border: 2px solid #DFDEE0;
+        font-size: 20px;
+        padding: 10px;
+        margin-top: 15px;
+    }
+    
+    .date-info input::placeholder {
+        opacity: 0.5;
+    }
+    
+    .cvc-info {
+        width: 50%;
+    }
+    
+    .cvc-info label {
+        color: black;
+        font-size: 20px;
+    }
+    
+    .cvc-info input {
+        height: 60px;
+        border: 2px solid #DFDEE0;
+        font-size: 20px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+    
+    .cvc-info input::placeholder {
+        opacity: .5;
+    }
+    
+    .first-form button {
+        width: 100%;
+        height: 100px;
+        font-size: 25px;
+        margin-top: 60px;
+    }
+    
+    .error {
+        font-size: 16px;
+    }
 
+}
+
+@media screen and (min-width: 1024px) {
+    .cards .back-card-box {
+        right: 200px;
+    }
+
+    .cards .front-card-box {
+        left: 200px;
+    }
 }

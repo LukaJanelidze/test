@@ -1,0 +1,268 @@
+/* desktop versiazea gadasatani
+
+desktop versiazea gadasatani */
+
+.homepage-main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.slider-container-links {
+    text-decoration: none;
+}
+
+.slider-news-container {
+    margin-top: -10px;
+    background-color: white;
+    box-shadow: 0 0 20px 20px white;
+    width: 90%;
+    padding: 5px;
+}
+
+.slider-date {
+    width: 100%;
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ff0000;
+
+}
+
+.slider-detail-1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10px;
+}
+
+.slider-detail-2 {
+    height: 5px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: #ff0000;
+}
+
+.homepage-main .slider-paragraph {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color:  black;
+    margin-top: 10px;
+}
+
+.homepage-hr {
+    border: 2px solid #ff0000;
+    border-radius: 2px;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.section-links {
+    text-decoration: none;
+}
+
+.section-div img{
+    width: 200px;
+    height: 200px;
+}
+
+.section-div {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.news-section {
+    width: 100%;
+    margin-left: 10px;
+    height: 200px;
+    overflow: scroll;
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+.news-section h2, .news-section p {
+    margin-top: 5px;
+}
+
+.news-section::-webkit-scrollbar {
+    display: none;
+}
+
+.news-section h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #dd4c4c;
+}
+
+.news-section h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ff0000;
+}
+
+.news-section p {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    color: black;
+    opacity: .95;
+}
+
+.second-section-box {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.second-section-links {
+    text-decoration: none;
+    border-radius: 100px;
+    margin: 10px 0 10px 0;
+}
+
+.second-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 100px;
+    justify-content: space-between;
+}
+
+.second-section img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
+.second-section-h2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    padding: 10px;
+    opacity: .65;
+}
+
+@media only screen and (min-width: 768px) {
+    .slider-news-container {
+        margin-top: -30px;
+        padding: 10px;
+    }
+    
+    .slider-date {
+        font-size: 25px;
+        color: #ff0000;
+    }
+    
+    .slider-detail-1 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 10px;
+    }
+    
+    .slider-detail-2 {
+        height: 5px;
+        width: 70px;
+        border-radius: 5px;
+        background-color: #ff0000;
+    }
+    
+    .homepage-main .slider-paragraph {
+        font-size: 20px;
+        color:  black;
+        margin-top: 15px;
+    }
+    
+    .homepage-hr {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .section {
+        padding: 5px;
+    }
+    
+    .section-div img{
+        width: 300px;
+        height: 200px;
+    }
+    
+    .news-section {
+        margin-left: 15px;
+    }
+    
+    .news-section h2, .news-section p {
+        margin-top: 10px;
+    }
+    
+    .news-section::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .news-section h3 {
+        font-size: 20px;
+    }
+    
+    .news-section h2 {
+        font-size: 24px;
+    }
+    
+    .news-section p {
+        font-size: 18px;
+    }
+    
+    .second-section img {
+        width: 90px;
+        height: 90px;
+        border-radius: 100%;
+    }
+    
+    .second-section-h2{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: black;
+        padding: 10px;
+        opacity: .65;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: #dddddd;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #ff0000;
+    }
+
+    .second-section-box {
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+    }
+    
+    .second-section-links {
+        width: 900px;
+    }
+}

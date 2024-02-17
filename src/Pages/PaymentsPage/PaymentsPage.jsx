@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {useState} from 'react'
 import BackCard from './../../assets/images/bg-card-back.png'
 import Logos from './../../assets/images/card-logo.png'
@@ -45,25 +46,29 @@ export default function PaymentsPage(props) {
 
         <div className='cards'>
 
-        <div className="back-card-box">
-        <img src={BackCard} alt="Card back" className='back-card' />
-        <p className="card-back-cvc">{props.cvc ? props.cvc : "123"}</p>
-        </div>
+            <div className='cards-container'>
 
-        <div className='front-card-box'>
-        <div alt="Card front" className='front-card'> </div>
-        <img src={Logos} alt="Card logo" className='logos' />
-        <p className="card-numbers">{props.number ? props.number : "0000 0000 0000 0000"}{" "}</p>
-        <p className="card-holder-name">{props.holder ? props.holder : "სახელი გვარი"}</p>
-        <p className="card-date">{props.month ? props.month : "00"}/{props.year ? props.year : "00"}</p>
-        </div>
+            <div className="back-card-box">
+            <img src={BackCard} alt="Card back" className='back-card' />
+            <p className="card-back-cvc">{props.cvc ? props.cvc : "123"}</p>
+            </div>
+
+            <div className='front-card-box'>
+            <div alt="Card front" className='front-card'> </div>
+            <img src={Logos} alt="Card logo" className='logos' />
+            <p className="card-numbers">{props.number ? props.number : "0000 0000 0000 0000"}{" "}</p>
+            <p className="card-holder-name">{props.holder ? props.holder : "სახელი გვარი"}</p>
+            <p className="card-date">{props.month ? props.month : "00"}/{props.year ? props.year : "00"}</p>
+            </div>
+
+            </div>
 
         <form className='first-form'>
                 
                 <div className="information">
 
                     <div className='card-holder'>
-                            <label htmlFor="holder" >Cardholder Name</label>
+                            <label htmlFor="holder" >მფლობელის სახელი</label>
                             <input 
                             type="text" 
                             id='holder'
@@ -76,7 +81,7 @@ export default function PaymentsPage(props) {
                         </div>
 
                         <div className='card-number'>
-                            <label htmlFor="number" >Card Number</label>
+                            <label htmlFor="number" >ბარათის ნომერი</label>
                             <ReactInputMask
                             mask={"9999 9999 9999 9999"}
                             maskChar={null}
@@ -91,25 +96,38 @@ export default function PaymentsPage(props) {
 
                         <div className='cvcdate'>
                             <div className='date-info'>
-                                <label htmlFor="date">Exp. Date (MM/YY)</label>
+                                <label htmlFor="date">მოქმედების ვადა</label>
 
                                 <input 
                                 type="number" 
                                 id='month' 
-                                placeholder='MM' 
+                                placeholder='თვე' 
                                 value={props.month}
                                 onChange={(event) => {
                                     if(event.target.value.length <=2) {
                                         props.setMonth(event.target.value)
                                     }
                                     setMonthError("")
-                                    }}
+                                    
+                                    const enteredValue = event.target.value;
+                                    const numericValue = parseInt(enteredValue, 10);
+                            
+                                    if (!isNaN(numericValue) && numericValue >= 1 && numericValue <= 12) {
+                                        props.setMonth(numericValue);
+                                    } else {
+                                        // Optionally, you can clear the input or display an error message.
+                                        // For now, I'll just set the value to an empty string.
+                                        props.setMonth("");
+                                    }
+                                }
+                                }
+                                    
                                 />
 
                                 <input 
                                 type="number" 
                                 id='year' 
-                                placeholder='YY'
+                                placeholder='წელი'
                                 value={props.year}
                                 onChange={(event) => {
                                     if(event.target.value.length <=2) {
@@ -123,11 +141,11 @@ export default function PaymentsPage(props) {
                             </div>
 
                             <div className='cvc-info'>
-                            <label htmlFor="cvc" className='classcvc'>CVC</label>
+                            <label htmlFor="cvc" className='classcvc'>CVC კოდი</label>
                             <input 
                             type="number" 
                             id="cvc" 
-                            placeholder='e.g. 123' 
+                            placeholder='მაგ. 123' 
                             value={props.cvc}
                             onChange={(event) => {
                                 if(event.target.value.length <=3) {

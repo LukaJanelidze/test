@@ -1,43 +1,55 @@
-import { Link } from "react-router-dom"
-import { Menu } from "antd"
-import "./Navbar.css"
+/* eslint-disable react/prop-types */
 
-export default function Navbar({isInline=false}) {
+import { Link, useNavigate } from "react-router-dom";
+import { Menu } from "antd";
+// import MainPicture from "./../assets/images/MainImg.png"
+import Picture from './../assets/images/picture.jpg'
+import "./Navbar.css";
 
-    return (
-        <header>
-        <Link to="/" className='homepage'>მთავარი</Link>
-        <Menu 
-        className="navbar" 
-        mode={ isInline?"inline":"horizontal"}
-        items={
-            [
-                {
-                    label: "პროფილი",
-                    key: "profile",
-                },
-                {
-                    label: "მოხალისეობა",
-                    key: "volunteer",
-                },
-                {
-                    label: "რეგისტრაცია",
-                    key: "register",
-                },
-                {
-                    label: "შემოწირულობა",
-                    key: "payment",
-                },
-            ]
-        }
-        >
-        {/* <Link to="profile" className='links' >პროფილი</Link>
-        <Link to="volunteer" className='links' >მოხალისეობა</Link>
-        <Link to="register" className='links' >რეგისტრაცია</Link>
-        <Link to="payment" className='links' >შემოწირულობა</Link> */}
+export default function Navbar({ isInline = false, setOpenMenu }) {
+  const navigate = useNavigate();
 
-        </Menu>
+  const handleClick = (e) => {
+    navigate(`/${e.key}`);
+    setOpenMenu(false);
+  };
 
-        </header>
-    )
+  const items = [
+    {
+      label: "პროფილი",
+      key: "profile",
+    },
+    {
+      label: "მოხალისეობა",
+      key: "volunteer",
+    },
+    {
+      label: "შესვლა",
+      key: "login",
+    },
+    {
+      label: "შემოწირულობა",
+      key: "payment",
+    }
+  ];
+
+  return (
+    <header>
+      <Link to="/" className="homepage"
+      onClick={
+        () => setOpenMenu(false)
+      }>
+        <img src={Picture} alt="" />
+      </Link>
+      <Menu
+        className="navbar"
+        mode={isInline ? "inline" : "horizontal"}
+        onClick={handleClick}
+      >
+        {items.map((item) => (
+          <Menu.Item key={item.key}>{item.label}</Menu.Item>
+        ))}
+      </Menu>
+    </header>
+  );
 }
